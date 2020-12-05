@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is good">
+        <title>
+            This is the Title of HTML 
+        </title>
+    </head>
+
+    <body style="background-color: skyblue;">
+        <header>
+            <nav>
+                This is a navigaation Tag
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                This is a Article Tag
+                <section>
+                    <h3>This is section 1 with H3</h3>
+                </section>
+                <section>
+                    <h5>This is section 2 with H5</h5>
+                </section>
+                <section>
+                    this is section 3 without any header
+                </section>
+                <section>
+                    <aside>This is aside tag in section 4 without header</aside>
+                </section>
+            </article>
+        </main>
+
+        Hello<br>World <!--br is use to break line-->
+        <h1>This is H1</h1>
+        <h2>This is H2</h2>
+        <h3>This is H3</h3>
+        <h4>This is H4</h4>
+        <h5>This is H5</h5>
+        <h6>This is H6</h6>
+
+        <hr width="50%"> <!--for horizontal line we can also change the weigth like wigth="70%"-->
+
+        <p>This is the Paragraph</p>
+        This is text without Paragraph.
+        <p><i>This is the Paragraph with Itallic Lettes</i></p>
+        <p><b>This is the Paragraph with Bold Lettes</b></p>
+        <p><big>This is Big Tag</big></p>
+        <p><small>This is Small Tag</small></p>
+        <p>H<sub>2</sub>O This is the Sub script </p>
+        <p>10<sup>2</sup>  This was the super script</p>
+        <!--This is a comment-->
+        <!--we can also use strong tag for bold letters-->
+        <p style="color: blue;background-color: red;">This text is Blue</p>
+        <!--we can also use this in body-->
+
+        <a href="https://www.google.com">Open Google</a>
+        <!--Example for LInk-->
+
+        <br>
+
+        <a href="https://www.google.com" target="_blank">Open Google in New Tab</a>
+        <!--Example for LInk to open in new tab-->
+
+        <br>
+
+        <img src="starlord.jpg" alt="image not found" width="500px"> 
+        <!--Image tag dont required closing tag-->
+        <br> <br>
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="C:\Users\amank\OneDrive\Pictures\black.png" height="100px">
+        </a>
+        <!--using link in image-->
+        <br> <br>
+        <video src="D:\M\Inception.mkv" poster="starlord.jpg"  controls width="500px"></video>
+        <!--
+            Video has ending tag 
+            we can also use autopaly just write autoplay 
+            if you want to loop the video just write loop  
+        -->
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--it was just copied from Youtube go to a YT video and click on share and embed it-->
+
+        <!--ol is used for ordered list, ul is used for unorder list and dl for description list-->
+        <ol type="1">
+            <li>
+                <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </li>
+            <li>
+                <a href="https://www.google.com" target="_blank">Google</a>
+            </li>
+            <li>
+                <a href="https://www.amazon.com" target="_blank">Amazon</a>
+            </li>
+            <li>
+                <a href="https://www.amazon.in" target="_blank">Amazon.in</a>
+            </li>
+            <li>
+                <a href="https://www.flipkart.com" target="_blank">Flipkart</a>
+            </li>
+        </ol>
+        <dl>
+            <!--it is description list-->
+            <dt>
+                <!--description ternm-->
+                Youtube
+            </dt>
+            <dd>
+                <!--description describe--> EPIC
+            </dd>
+            <dt>Gmail</dt>
+            <dd>GG</dd>
+        </dl>
+        <table border="2">
+            <!--this is a table tag-->
+            <caption>
+                <!--it is use to give the caption o the table-->
+                This is the caption of the Table
+            </caption>
+            <thead>
+                <tr>
+                    <th> <!--th is table header-->num1</th>
+                    <th>num2</th>
+                    <th>num3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--this is a table row it represent a whole horizontal row-->
+                    <td>
+                        <!--it will represent a column or you can say table data-->
+                        one
+                    </td>
+                    <td>two</td>
+                    <td>three</td>
+                </tr>
+                <tr>
+                    <td>four</td>
+                    <td>five</td>
+                    <td>six</td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <!--colspan we can span the column -->seven</td>
+                    <td>eigth</td>
+                    <td>nine</td>
+                </tr>
+            </tbody>
+            <!--we  can also use thead and tbody-->
+        </table>
+        <!--span are inline containers and div are block containers-->
+        <span>span 1</span>
+        <span>span 2</span>
+        <span style="display: inline-block; width: 40px;"><!--it is use to give horizontal space --></span>
+        <span style="display:block; height: 40px;"><!--it is use to give vertical space --></span>
+        <div>div1</div>
+        <div>div2</div>
+        <input type="text" value="Enter Your Name">
+        <input type="date">
+        <input type="datetime">
+        <input type="datetime-local">
+        <input type="hidden">
+        <input type="time">
+        <input type="week">
+        <input type="image" src="black.png" height="100px" width="100px">
+        <input type="search">
+        <input type="color">
+        <input type="reset">
+        <input type="submit">
+        <!--input tag doesnt have ending tag-->
+        <textarea rows="10" cols="10">
+            Enter
+        </textarea>
+        <iframe src="https://giraffeacademy.com" frameborder="0" width="1000" height="1000">we doesnt suport</iframe>
+        <br>
+        <footer>
+            This is the footer
+        </footer>
+
+    </body>
+</html>

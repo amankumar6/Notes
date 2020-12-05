@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link rel="stylesheet" type="text/css" href="../CSS/1.css">-->
+        <title>
+            Arrow Function
+        </title>
+    </head>
+    <body>
+        This i arrow function
+    </body>
+    <script>
+        function sum(a,b)
+        {
+            return a+b;
+        }
+        let sum2=(c,d)=>{
+            return c+d;
+        }
+        let sum3=(e,f) => e+f;
+        let half =a=>a/2;
+
+        let obj1=
+        {
+            greet: "Hebby Bh",
+            names:["a","b","c","d"],
+            ff()
+            {
+                this.names.forEach((student)=>{
+                    console.log(this.greet +" Epic "+ student);
+                });
+            }
+        }
+        obj1.ff();
+    </script>
+</html>

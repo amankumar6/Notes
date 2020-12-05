@@ -1,0 +1,6 @@
+.container {
+    background-color: $primaryColor;
+    margin: 10px;
+    height: 300px;
+    @include flexCenter(row)
+}

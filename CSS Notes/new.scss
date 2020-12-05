@@ -1,0 +1,33 @@
+$primaryColor: dodgerblue;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+}
+
+@import './container';
+
+#csgo {
+    border: 4px double $primaryColor;
+    transition: opacity 100ms ease-in;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.website:hover {
+    color: $primaryColor !important;
+}
+
+.dialpad1 {
+    background: $primaryColor;
+}
+
+// @extend `name` is use tho copy css style
+
+// in scss use can use add,minus,multiply,divide
+// width: 100%-20%

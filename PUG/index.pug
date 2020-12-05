@@ -1,0 +1,125 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedbyAdmin
+            em (Posted By Admin)
+        .date=commentData.date
+        .author=commentData.author
+        .text= commentData.text
+doctype html
+html
+    head
+        link(rel="stylesheet" href="style.css")
+        title PUG Notes
+        style.
+            h1{
+                background-color: plum;
+                padding: 30px 0px;
+                text-align:center;
+                text-transform:capitalize;
+            }
+            p{
+                margin:30px 0px;
+            }
+            a{
+                text-decoration:none
+            }
+            .comment{
+                font-family:sans-serif;
+                line-height:1.5;
+                padding: 10px;
+                border :1px solid #555;
+                width: 250px;
+                margin: 30px 0px;
+            }
+            .date{
+                font-size: 85%;
+                text-align: right;
+            }
+            .author{
+                font-size:110%;
+                font-weight: bold;
+            }
+    body
+        h1 Welcome to PUG
+
+        -const c={date:'14-11-2020',author:'WiZaRd',text:'Hebby Bh xD ghlf',postedbyAdmin:true}
+        +comment(c)
+
+        -const c1={date:'9-1-2020',author:'Hebby BH',text:'Data Structure Git Pug Vue Node'}
+        +comment(c1)
+        p. 
+            This is a paragraph tag
+            and this is a new line
+        
+        ul(style="background-color:green")
+            li this is item 1
+            li this is item 2
+            li this is item 3
+        
+        p#pagetitle Page Title goes here
+
+        p.pageclass
+            This is page class
+            and this is new line in page class
+        
+        .dispaly-box this is default div 
+
+        input(type="password" placeholder="xD" required data-js=` ${ 5>2 ? "OK":"NOT OK!"} `)
+
+        - const myClasses =["class1","class2","class3"]
+        div.my-div(class=myClasses)
+
+        - const myStyles={"color":"red","background-color":"skyblue","margin":"30px 0px", "padding":"20px"}
+        div(style=myStyles) this is java script css
+
+        -const myAttributes ={"src":"myPhoto.png","alt":"this is my photo"}
+        img&attributes(myAttributes)(width="300px" height="100px")
+
+        h1 for/each loop
+
+        each n in [1,2,3,4,5]
+            p=n+" is this"
+        
+        -const names =["Doom","CS:GO","Fortnite","Kali LInux","Satan"]
+        each n,i in names
+            p=n+" ----- "+i
+
+        -const grades ={"web dev":85,"Software Design":90,"painting":80}
+        for n,i in grades
+            p="You got "+n+" in "+i
+        else
+            strong No Value are here!
+
+        h1
+            u Conditional Statements
+
+        -let user ={name : "WiZaRd", loggedIn: false,lastLogin:6}
+
+        if user.loggedIn
+            p
+                | Welcome Back,
+                span(style="color:skyblue")
+                    strong #{user.name}
+        else if user.lastLogin < 10
+            p Your Last Login was #{user.lastLogin} minutes ago
+            p
+                a(href="#" style="color:skyblue") Login Again :)
+        else 
+            a(href="#" style="color:skyblue") Log In
+        
+        h1 Case Statement in Pug
+
+        - const orderStatus ='pending'
+
+        case orderStatus
+            when 'pending'
+                p Your Order is Pending
+            when 'transist'
+                p Your Order is In Transist
+            when 'completed'
+                p Your order is Completed :)
+            default
+                p WTF!
+                
+        h3 thats all thanks
+

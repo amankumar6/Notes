@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link rel="stylesheet" type="text/css" href="../CSS/1.css">-->
+        <title>
+            Java Script
+        </title>
+        <!--<script src="1.js">
+        </script>-->
+    </head>
+    <body>
+        
+        <div id="main" class="container">
+            <ul id="num">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+             </ul>
+        </div>
+        <div class="container">
+            
+        </div>
+        <script>
+            let main=document.getElementById('main');
+            console.log(main);
+
+            let num=document.getElementById('num');
+            console.log(num);
+
+            let containers= document.getElementsByClassName('container');
+            console.log(containers);
+
+            //let sel =document.querySelector('#num>li');
+            //console.log(sel)
+
+            let sel =document.querySelectorAll('#num>li');
+            console.log("selector return", sel)
+
+            let cf=confirm(`Do you what to change replace 6 with 7?`);
+            cf? sel[5].innerHTML="7":sel[5].innerHTML="6";
+        </script>
+    </body>
+</html>

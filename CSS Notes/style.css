@@ -1,0 +1,508 @@
+body {
+    background: url("mIDQkf.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background: linear-gradient(to bottom, rgb(16, 44, 83),rgb(20, 67, 113),rgb(25, 80, 129),rgb(30, 90, 140));;*/
+    text-transform: capitalize;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+}
+
+#csgo {
+    opacity: 1;
+    border: 4px double purple;
+    transition: opacity 100ms ease-in;
+}
+
+#csgo:hover {
+    opacity: 0.85;
+}
+
+#title {
+    width: fit-content;
+}
+
+.website {
+    color: black;
+    transition: all 200ms ease-in-out;
+}
+
+.website:hover {
+    color: red;
+    font-size: 35px;
+}
+
+.subtitle {
+    color: coral;
+}
+
+#about-me {
+    color: blue;
+}
+
+/*p{
+    background-color: rgb(224, 114, 169);
+}
+*/
+hr {
+    background-color: black;
+    height: 10px;
+}
+
+/*~~ Pseudoselectors ~~*/
+
+/*li:first-child
+{
+    color: cornflowerblue ;
+}
+li:nth-child(2)
+{
+    color: blueviolet  ;
+}
+li:last-child
+{
+    color: crimson;
+}*/
+/*.link:link{
+    color: blueviolet;
+}
+.link:visited{
+    color: red;
+}*/
+
+
+/*~~ Advanced Selectors ~~*/
+
+h2+a {
+    /*every a tag after h2*/
+    color: green;
+}
+
+textarea~button
+
+/*every button after textarea which share same parent*/
+    {
+    color: red;
+}
+
+form+button {
+    color: green;
+}
+
+ul>li {
+    /*every single li under ul-child selector*/
+    color: green;
+}
+
+ul li {
+    /*decendent selector*/
+    color: blue;
+}
+
+ul {
+    list-style-type: none;
+    /*it is used to remove the bullets from the list*/
+    margin: 0;
+    padding: 0;
+}
+
+/*~~ Attribute Selectors ~~ */
+
+h2[class=subtitle] {
+    color: hotpink;
+}
+
+img[src^="../HTML/Notes/"] {
+    /* ^ means source value starts with this, $ means source value ends with, * means source contains with this */
+    border: 5px solid green;
+}
+
+h2[class~=article-subtitle] {
+    background-color: greenyellow;
+}
+
+#service-image {
+    width: 480px;
+    height: 302.64px;
+    background: url("https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid rgba(94, 255, 126, 0.6);
+    margin: 20px 10px;
+    float: left;
+}
+
+/*two types of Gradients are radial and linear Gradients*/
+
+#linear-gradients-horizontal {
+    height: 400px;
+    width: 490px;
+    background: linear-gradient(to bottom, rgb(94, 255, 126), rgba(94, 255, 126, 0));
+    margin: 20px 10px;
+}
+
+#linear-gradients-diagonal {
+    height: 400px;
+    width: 500px;
+    background: linear-gradient(to top right, rgb(0, 0, 255), rgba(0, 0, 255, 0));
+
+}
+
+#linear-gradients-angle {
+    height: 400px;
+    width: 500px;
+    background: linear-gradient(120deg, rgb(255, 0, 255), rgb(0, 0, 255));
+}
+
+#radial-gradients {
+    height: 400px;
+    width: 500px;
+    background: radial-gradient(circle, red 20%, green 50%, blue 60%);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.website {
+    text-decoration: none;
+}
+
+.italics {
+    font-style: italic;
+}
+
+#about-us-image {
+    height: 300px;
+    border: 4px double blue;
+    margin: 10px 40px 50px 50px;
+    /*top right bottom left*/
+    padding: 10px 20px;
+    /* top&bottom right&left*/
+    float: right;
+}
+
+.site-table {
+    display: inline-block;
+}
+
+/*~~ Flex Box ~~*/
+
+.dialpad1 {
+    background: white;
+    margin: 10px 30% 10px 38%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number1 {
+    background: aqua;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    line-height: 50px;
+    width: 70px;
+    margin: 10px;
+}
+
+/*using Grid*/
+.dialpad2 {
+    background: rgba(255, 255, 255, 0);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+
+}
+
+.number2 {
+    background: plum;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    line-height: 50px;
+    width: 60px;
+    margin: 10px;
+}
+
+.number2:hover {
+    background: rgba(221, 160, 221, 0.9);
+    color: red;
+    text-align: center;
+    font-weight: 600;
+    line-height: 50px;
+    width: 60px;
+    margin: 10px;
+}
+
+.container {
+    background-color: white;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*justify-content are for horizontal alignment*/
+    align-items: center;
+    /*align-iteam is for vertical alignment*/
+}
+
+.container-item {
+    background: green;
+    color: whitesmoke;
+    font-weight: 900;
+    text-align: center;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.container2 {
+    background-color: white;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-item2 {
+    background: orange;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.container3 {
+    background-color: white;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-item3 {
+    background: red;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.board {
+    background-color: white;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.piece {
+    background: black;
+    width: 100px;
+    line-height: 100px;
+
+}
+
+/*~~ Grid ~~*/
+
+.grid-container1 {
+    background: white;
+    margin: 10px;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 100px 100px;
+    justify-content: center;
+    /*justify-content are for horizontal alignment*/
+    align-content: center;
+    /*align-content is for vertical alignment*/
+
+}
+
+.grid-item1 {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+
+    width: 100px;
+    line-height: 40px;
+    margin: 10px;
+}
+
+.grid-container2 {
+    background: white;
+    margin: 10px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: auto auto;
+}
+
+.grid-item2 {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px;
+}
+
+.submit-button {
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    background: rgb(89, 150, 255);
+    transition: all 300ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.submit-button:hover {
+    background: rgba(89, 150, 255, 0.7);
+}
+
+/*
+use -webkit- as a prefix in transition for Safari and Chrome
+-moz- for Mozila firefox
+-o- for Opera
+*/
+
+.reset-button {
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    background: rgb(89, 150, 255);
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.reset-button:hover {
+    background: rgba(89, 150, 255, 0.8);
+    transform: scale(1.1);
+    transform: translate(10px, 10px);
+    /*x-aisx,y-axis*/
+}
+
+.menu-button {
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 25px;
+    background: #73AD21;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+
+}
+
+.menu-button:hover {
+    background: rgba(89, 150, 255, 0.8);
+    transform: rotate(-10deg);
+}
+
+.submit-button2 {
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    background: rgb(89, 150, 255);
+    transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.submit-button2:hover {
+    background: rgba(89, 150, 255, 0.8);
+    transform: matrix(1, 0.2, 0.2, 1, 10, 20);
+    /*scaleX,skewX,skewY,scaleY,translateX,translateY*/
+}
+
+/*animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction;*/
+/*
+@keyframes example
+{
+    0%
+    {
+        background: url("mIDQkf.jpg") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    20%
+    {
+        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Neckertal_20150527-6384.jpg/1200px-Neckertal_20150527-6384.jpg") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    40%
+    {
+        background: url("https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&w=1000&q=80") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    60%
+    {
+        background: url("https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    80%
+    {
+        background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&w=1000&q=80") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    100%
+    {
+        background: url("https://learn.zoner.com/wp-content/uploads/2018/08/landscape-photography-at-every-hour-part-ii-photographing-landscapes-in-rain-or-shine.jpg") ;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+body
+{
+    animation: example 10s linear 2s 100 normal ;
+}
+*/

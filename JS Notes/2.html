@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #button{
+            padding: 10px 14px;
+            background: aqua;
+            font-weight: bold;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    </style>
+    <head>
+        <title>
+        Js
+        </title>
+    </head>
+    
+    <body>
+        <div class="main">
+            <h1>This is my Heading</h1>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, vel hic quo voluptate cupiditate in, consectetur possimus necessitatibus reiciendis non voluptatum enim? Ratione illo at veniam dolorem amet. Voluptatibus, repellendus vel non sed aut incidunt saepe assumenda beatae tempora, error doloremque perferendis aliquid nobis. Dolorem placeat nostrum eveniet explicabo deserunt, cupiditate, voluptatem recusandae natus porro laudantium, tempore rem distinctio exercitationem consequuntur culpa fuga neque? Delectus nihil debitis consequatur, sit ducimus quos minus corrupti velit eveniet libero ipsa vel beatae, illo, quibusdam temporibus facere assumenda molestiae omnis animi in porro nesciunt dolor suscipit. Itaque id voluptas necessitatibus porro impedit dicta maxime quis repudiandae harum nobis ea dolorum eius autem, accusantium, eligendi tempora! Saepe in eaque, ipsam eveniet architecto quam alias numquam enim explicabo tempore magnam aut, voluptatum suscipit distinctio perspiciatis, vitae omnis cum sequi. Sed hic accusantium dolor, adipisci voluptates quam commodi harum labore aperiam. Quasi enim dignissimos repellendus, voluptatem corrupti eos officia ducimus blanditiis quibusdam tempore eveniet asperiores nisi dolorem praesentium sunt placeat, debitis beatae. Assumenda reprehenderit ipsam voluptatibus totam dicta eum at inventore nulla, beatae exercitationem fuga, nesciunt veritatis fugiat nostrum vel aliquam facere! Reprehenderit asperiores enim eos, voluptatum accusamus reiciendis excepturi explicabo corporis recusandae esse iusto, id, consequuntur quod nam molestiae. Alias sint amet veritatis eveniet vel, culpa libero! Assumenda, optio consectetur corporis tempore ea similique ipsa qui, mollitia eveniet eius beatae! Quidem vel voluptatum corrupti magni nisi amet corporis beatae.
+            </p>
+            Time Now is <span id="time"></span>
+        </div>
+        <button id="button" onclick="hide()">Show/Hide</button>
+        <script>
+            /*let para= document.getElementById('para');
+            para.addEventListener('mouseover',function run(){
+                console.log('mouse inside');
+            });
+            para.addEventListener('mouseout',function run(){
+                console.log('mouse Outside');
+            });*/
+            function hide()
+            {
+                let button= document.getElementById('button');
+                button.addEventListener('click')
+                let para= document.getElementById('para');
+                para.style.display!="none" ?para.style.display="none" : para.style.display="block";
+            }
+            // setTimeout -- Allows us to run the function once after the interval of time
+
+            // clearTimeout -- Allows us to run the function repeatedly after the interval of time 
+            function greet(name)
+            
+            {
+                console.log("Hello "+name);
+            }
+            let t=setTimeout( greet, 2000,"AA");
+            console.log(t);
+            //clearTimeout(t);
+            //we can also pass multiple arggument
+            //setInterval(greet,2000,"BB");
+
+            function displayTime()
+            {
+                time.innerHTML =new Date();
+                //time=new Date();
+                //console.log(time);
+                //document.getElementById('time').innerHTML=time;
+            }
+            setTimeout(() => {
+                
+            }, 22);
+            setInterval(displayTime,1000);
+            //let now =new Date( year, month, date , hours, minutes, seconds, miliseconds);
+            let now=new Date();
+            console.log(now)
+
+            now.setFullYear(3030);
+            let yr=now.getFullYear();
+            console.log(yr);
+
+            let mt=now.getMonth();
+            console.log(mt);
+
+            let dt=now.getDate();
+            console.log(dt);
+
+            let hr=now.getHours();
+            console.log(hr);
+
+            let day=now.getDay();
+            console.log(day);
+
+            console.log(now.getUTCMinutes());
+            console.log(Date.now())
+        </script>
+    </body>
+</html>
