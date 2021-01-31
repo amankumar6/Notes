@@ -1,0 +1,48 @@
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+
+}
+
+.myClass {
+    font-family: cursive;
+}
+
+.middle {
+    color: lightblue
+}
+
+#panel,
+#panel2,
+#panel3,
+#flip,
+#flip2,
+#flip3 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel,
+#panel3 {
+    padding: 50px;
+    display: none;
+}
+
+#panel2 {
+    padding: 50px;
+}
+
+.animate{
+    height: 200px;
+}
+
+.ajax h4{
+    font-weight: 400;
+    font-family: cursive;
+    color: rgb(202, 27, 27);
+}
