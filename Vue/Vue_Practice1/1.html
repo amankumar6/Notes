@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href=".css">
+    <title>Vue-1</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    body {
+        background-image: linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);
+        
+    }
+
+    .ex input {
+        outline: none;
+        border-radius: 5px;
+        margin: 10px 0px;
+    }
+
+    .red {
+        border: 3px solid red;
+    }
+
+    .green {
+        border: 3px solid rgb(0, 240, 0);
+    }
+</style>
+
+<body>
+    <div class="one">
+        <h1>{{ greeting }}</h1>
+        <p v-text="greeting"></p>
+        <p v-html="greeting"></p>
+        <p v-once>{{greeting}}</p>
+        <!--
+            We can also use v-text
+            for example
+            <p v-text="greeting"></p>
+            we can also use 
+            <p v-html="greeting"></p>
+            in v-html we can input html tags
+            if we use v-once it will change once 
+        -->
+        <input v-model="greeting">
+    </div>
+    <hr>
+    <div class="if-else">
+        <h3>
+            Number is(using if-else)
+        </h3>
+        <div v-if="temp===1"> One </div>
+        <div v-else-if="temp===2"> Two </div>
+        <div v-else-if="temp===3"> Three </div>
+        <div v-else> Greater than three </div>
+    </div>
+    <hr>
+    <div class="show">
+        <h3>
+            Using V-Show
+        </h3>
+        <div v-show="temp===1"> One </div>
+    </div>
+    <hr>
+    <div class="ex">
+        Sign Up
+        <br>
+        <!--
+            <input v-model="email" :class="{red: email.length<5}">
+        -->
+        <input v-model="email" :class="[email.length<5?'red':'green']">
+        <br>
+        <button onclick="alert('signed up')" v-bind:disabled=" email.length < 5">
+            Submit
+        </button>
+        <!--
+            both are same
+            <button onclick="alert('signed up')" :disabled=" email.length < 5">
+                Submit
+            </button>
+        -->
+    </div>
+    <hr>
+    <div class="loop">
+        {{kittifyname}}
+        <br>
+        <input v-model="newcat" v-on:keyup.enter="addkitty">
+        <button @click="addkitty">+ADD</button>
+        <!--we can use @ insted of v-on: -->
+        <ul>
+            <li v-for="cat in cats"> {{cat.name | thisisafunction}}</li>
+        </ul>
+        <cat-list :cats="cats"/>
+    </div>
+</body>
+
+<script src="1.js"> </script>
+
+
+</html>

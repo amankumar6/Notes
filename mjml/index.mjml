@@ -1,0 +1,25 @@
+<mjml>
+    <mj-head>
+        <mj-font name="muli" href="https://use.typekit.net/fei8xjc.css" />
+
+        <mj-style>
+            .font-text{
+                font-family: muli, sans-serif !important;
+            }
+        </mj-style>
+    </mj-head>
+    
+    <mj-body background-color="white">
+        <mj-section>
+            <mj-column>
+                <mj-text css-class="font-text" font-size="20px">
+                Password Reset
+                </mj-text>
+                
+
+
+
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
